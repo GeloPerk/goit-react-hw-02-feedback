@@ -6,4 +6,6 @@ export const Div = styled.div`
     padding: 20px;
     border: 5px solid black;
     border-radius: 15px;
+    background-color: dodgerblue;
+    color: white;
 `

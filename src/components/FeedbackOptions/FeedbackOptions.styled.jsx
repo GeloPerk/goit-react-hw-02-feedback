@@ -4,6 +4,9 @@ export const Button = styled.button`
   width: 100px;
   padding: 10px;
   cursor: pointer;
+  background-color: white;
+  color: dodgerblue;
+  border: 0;
 `;
 
 export const DivBtns = styled.div`
