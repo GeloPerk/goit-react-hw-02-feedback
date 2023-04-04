@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
-  width: 100px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: white;
-  color: dodgerblue;
-  border: 0;
-`;
-
-export const DivBtns = styled.div`
-  margin: 0 auto;
+export const ButtonList = styled.ul`
   display: flex;
   justify-content: space-around;
-  
+  list-style: none;
+
+  .feedbackBtn {
+    padding: 4px;
+    width: 80px;
+    background-color: ;
+    border: 1px solid #757575;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: white;
+    color: dodgerblue;
+
+    &:hover {
+    background-color: dodgerblue;
+    color: white;
+    border-color: white;
+    }
 `;
+

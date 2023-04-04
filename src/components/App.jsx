@@ -12,17 +12,20 @@ class App extends Component {
     bad: 0,
   };
 
-  onClickGood = () => {
-    this.setState(prevState => ({ good: prevState.good + 1 }));
-  };
+  handleClick  = option =>
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
 
-  onClickNeutral = () => {
-    this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
-  };
+  // onClickGood = () => {
+  //   this.setState(prevState => ({ good: prevState.good + 1 }));
+  // };
 
-  onClickBad = () => {
-    this.setState(prevState => ({ bad: prevState.bad + 1 }));
-  };
+  // onClickNeutral = () => {
+  //   this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
+  // };
+
+  // onClickBad = () => {
+  //   this.setState(prevState => ({ bad: prevState.bad + 1 }));
+  // };
 
   countTotalFeedBack = () => {
     const { good, neutral, bad } = this.state;
@@ -46,15 +49,20 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    // const total = this.countTotalFeedback;
 
     return (
       <Div>
         <Section title="Please leave feedback">
           <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.handleClick}
+          ></FeedbackOptions>
+          {/* <FeedbackOptions
             onClickGood={this.onClickGood}
             onClickNeutral={this.onClickNeutral}
             onClickBad={this.onClickBad}
-          />
+          /> */}
         </Section>
         <Section title="Statistics">
           {good > 0 || neutral > 0 || bad > 0 ? <Statistics
