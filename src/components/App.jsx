@@ -19,6 +19,8 @@ class App extends Component {
   //   this.setState(prevState => ({ good: prevState.good + 1 }));
   // };
 
+  // fvkjrlevr
+
   // onClickNeutral = () => {
   //   this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
   // };
